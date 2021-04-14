@@ -4,17 +4,16 @@ const AppInfoParser = require('app-info-parser');
 async function main() {
     try {
         // inputs from action
-        const apkPath = core.getInput('apkPath');
+        const aarPath = core.getInput('aarPath');
 
-        console.log(apkPath);
+        console.log(aarPath);
 
-        const parser = new AppInfoParser(apkPath);// or xxx.ipa
+        const parser = new AppInfoParser(aarPath);
         parser.parse().then(result => {
 
             core.setOutput("versionCode", result.versionCode);
-            core.setOutput("versionNum", result.versionName);
-            core.setOutput("applicationId", result.package);
-            core.setOutput("name", result.application.label);
+            core.setOutput("versionName", result.versionName);
+            core.setOutput("package", result.package);
             console.log('app info ----> ', result);
 
         }).catch(err => {

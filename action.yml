@@ -1,23 +1,21 @@
-name: 'Get Apk Version'
-description: 'Get Apk Version'
-author: 'JantHsueh'
+name: 'Get Aar Version'
+description: 'Get Aar Version'
+author: 'bungabear'
 branding:
   icon: arrow-right-circle
   color: gray-dark
 inputs:
-  apkPath:
-    description: 'apk path'
+  aarPath:
+    description: 'aar path'
     required: true
-    default: 'app/build/outputs/apk/release/app-release.apk'
+    default: 'app/build/outputs/aar/app-release.aar'
 outputs:
   versionCode:
-    description: 'apk versionCode'
-  versionNum:
-    description: 'apk versionNum'
-  applicationId:
-    description: 'apk applicationId'
-  name:
-    description: 'apk name'
+    description: 'aar versionCode'
+  versionName:
+    description: 'aar versionName'
+  package:
+    description: 'aar package'
 runs:
   using: 'node12'
   main: 'dist/index.js'

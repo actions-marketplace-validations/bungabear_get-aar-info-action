@@ -1,0 +1,26 @@
+{
+  "name": "get-aar-info-action",
+  "version": "1.0.0",
+  "description": "Get aar information,different compilation and build parameters, resulting in different apk version information",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "app-info-parser": "github:bungabear/app-info-parser",
+    "ncc": "^0.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "ncc cache clean && ncc build index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bungabear/get-aar-info-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bungabear/get-aar-info-action/issues"
+  },
+  "homepage": "https://github.com/bungabear/get-aar-info-action#readme"
+}
